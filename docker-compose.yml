@@ -45,8 +45,9 @@ services:
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
       - ./5xx.html:/www/error_pages/5xx.html
-    ports:
-      - 80:80
+    ports: {}
+      # optional
+      #- 80:80
     depends_on:
       - api
       - web
